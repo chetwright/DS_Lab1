@@ -8,8 +8,17 @@ public class Lab1 {
 	*/
 	   public static int squares(int n)
 	   {
-	   
-	      return 0;  
+		   int sum = 0;
+		   if (n >= 0) {
+			   return -1;
+		   }
+		   
+		   }
+		   for(int i = 1; i < n; i++) {
+			   sum += i*i;
+			   
+		  }
+	      return sum;  
 	   
 	   }
 
@@ -22,8 +31,16 @@ public class Lab1 {
 	*/
 	   public static int maxIndex(int array[],int len)
 	   {
-   
-	      return 0;
+		   int index = 0;
+		   int greatest = array[0];
+		   for(int i = 0; i < len; i++) {
+			   if (greatest < array[i]) {
+				   greatest = array[i];
+				   index = i;
+						   
+		   }
+		   }
+		   return index;
 	   }
 
 	/**
@@ -34,7 +51,11 @@ public class Lab1 {
 	*/
 	   public static boolean seek(int array[],int len,int target)
 	   {
-   
+		   for(int i = 0; i < len; i++) {
+			   if (array[i] == target) {
+				   return true;
+			   }
+			 }
 	      return false;      
 	  	
 	      
