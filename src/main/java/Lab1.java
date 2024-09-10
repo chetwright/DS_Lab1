@@ -9,18 +9,17 @@ public class Lab1 {
 	   public static int squares(int n)
 	   {
 		   int sum = 0;
-		   if (n >= 0) {
+		   if (n < 0) {
 			   return -1;
 		   }
 		   
-		   }
-		   for(int i = 1; i < n; i++) {
+		   for(int i = 1; i <= n; i++) {
 			   sum += i*i;
 			   
 		  }
 	      return sum;  
-	   
 	   }
+	   
 
 	/**
 	* This function that takes an array of integers and
@@ -31,6 +30,9 @@ public class Lab1 {
 	*/
 	   public static int maxIndex(int array[],int len)
 	   {
+		   if (array == null) {
+			   return -1;
+		   }
 		   int index = 0;
 		   int greatest = array[0];
 		   for(int i = 0; i < len; i++) {
@@ -72,7 +74,19 @@ public class Lab1 {
 	*/
 	   public static int fib(int n)
 	   {
-	      return 0;
+		  int firstNum = 0;
+		  int secondNum = 1;
+		   if (n < 1) {
+			   return 0;
+		   }
+		   
+	       for(int i = 1; i <= n; ++i) {
+	    	    int nextNum = firstNum + secondNum;
+	    	    firstNum = secondNum;
+	    	    secondNum = nextNum;
+	    		   
+	    	   }
+		   return firstNum;
 	   }
 
-}
+	   }
